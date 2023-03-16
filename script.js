@@ -61,7 +61,6 @@ function current(data){
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${apiKey}&units=metric`).then(response => response.json()).then(function (currentWeather) {
         var todaysWeather = document.querySelector('#today')
         var todayDate = moment.unix(currentWeather.dt).format("DD/MM/YYYY")
-        console.log(currentWeather)
         todaysWeather.innerHTML = `<div class="card" style="width:100%; height:100%;">
         <img class="card-img-top" src='https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png' style="height:150px; width:150px;">
         <div class="card-body">
@@ -82,7 +81,6 @@ function forecast(data) {
         
         for (var i = 1;  i < 40; i++) {  
             var date = moment.unix(fiveDaysOutput.list[i].dt).format("DD/MM/YYYY")
-            console.log(i)    
             fiveDaysWeather.innerHTML += `<div class="card" style="width:205px">
             <img class="card-img-top" src='https://openweathermap.org/img/wn/${fiveDaysOutput.list[i].weather[0].icon}@2x.png'>
             <div class="card-body">
