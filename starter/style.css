@@ -1,0 +1,16 @@
+.container-fluid .row{
+    margin-top: 20px;
+}
+#search-button{
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+#forecast{
+    margin-left: -1px;
+}
+.btn-custom{
+    width: 262px;
+    margin: 6px 0;
+    color: white;
+    background-color: rgb(28, 28, 28);
+}
